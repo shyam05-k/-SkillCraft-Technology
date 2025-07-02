@@ -2,19 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do App</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>To-Do List 📝</h1>
-    <div class="input-container">
-      <input type="text" id="taskInput" placeholder="Add a new task" />
-      <button onclick="addTask()">Add</button>
-    </div>
-    <ul id="taskList"></ul>
-  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">Skill centre</div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h1>Welcome to Skill Centre Technologies</h1>
+    <p>Your one-stop solution for modern web development and digital services. Scroll down to learn more about us.</p>
+  </section>
+   
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>At  Skill Centre Technologies, we are passionate about building digital experiences that drive results. As a full-service web development company, we specialize in crafting custom websites, web applications, and e-commerce platforms tailored to meet your unique business needs.
+
+With a team of skilled developers, designers, and strategists, we blend creativity with technology to deliver fast, secure, and responsive solutions. Whether you're a startup or an established brand, our goal is to help you grow online with innovative and scalable web solutions.
+
+We believe in clear communication, long-term partnerships, and a user-first approach that ensures every project we deliver not only looks great but performs even better.
+
+.</p>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>We provide a wide range of web solutions and internships including:</p>
+    <ul>
+      <li>UI/UX </li>
+      <li>Datascience</li>
+      <li>App Development</li>
+      <li>Cyber Security</li>
+      <li>Digital marketing</li>
+      <li>Graphic Designing</li>
+    </ul>
+  </section>
+ 
+ 
+  <section id="team">
+    <h1>Meet Our Team</h1>
+    <p>Our team consists of talented developers, designers, and strategists who bring ideas to life.</p>
+    <ul>
+      <li><strong>Shanmathi</strong> - Lead Developer</li>
+      <li><strong>Shantha</strong> - UX/UI Designer</li>
+      <li><strong>Shankar</strong> - Project Manager</li>
+      <li><strong>Selva</strong> - Team lead</li>
+      <li><strong>Velu</strong> - Intern Software Developer</li>
+      <li><strong>Ajay</strong> - software Developer</li>
+
+
+    </ul>
+  </section>
+  
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Reach out us.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <script src="script.js"></script>
 </body>

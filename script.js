@@ -1,25 +1,33 @@
-function addTask() {
-  const input = document.getElementById("taskInput");
-  const taskText = input.value.trim();
-  if (taskText === "") return;
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
 
-  const taskList = document.getElementById("taskList");
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
-  const li = document.createElement("li");
-  li.textContent = taskText;
 
-  li.addEventListener("click", function () {
-    li.classList.toggle("done");
+// Scroll reveal for sections
+const sections = document.querySelectorAll('section');
+
+function revealSections() {
+  const triggerBottom = window.innerHeight * 0.85; // when 85% of screen
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if(sectionTop < triggerBottom) {
+      section.classList.add('visible');
+    } else {
+      section.classList.remove('visible');
+    }
   });
-
-  const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "X";
-  deleteBtn.onclick = function () {
-    li.remove();
-  };
-
-  li.appendChild(deleteBtn);
-  taskList.appendChild(li);
-
-  input.value = "";
 }
+
+window.addEventListener('scroll', revealSections);
+
+// Trigger once on page load
+revealSections();
